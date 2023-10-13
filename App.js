@@ -1,15 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { Greet } from './src/components/Greet';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
+import NavigationStack from './src/navigation/NavigationStack';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <View style={styles.container}>
-        <Text>React native course</Text>
-        <Greet firstname="Daniel" lastname="Batres" />
-        <Greet />
-      </View>
+      <NavigationStack />
     </NavigationContainer>
   );
 }
