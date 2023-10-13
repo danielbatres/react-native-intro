@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text } from 'react-native';
+import PropTypes from 'prop-types';
 
 function Greet(props) {
-  // const { firstname = "Daniel", lastname = "Garcia" } = props;
   const { firstname, lastname } = props;
 
   return (
@@ -13,6 +13,11 @@ function Greet(props) {
 Greet.defaultProps = {
   firstname: "Daniel",
   lastname: "Garcia"
+};
+
+Greet.propTypes = {
+  firstname: PropTypes.string.isRequired,
+  lastname: PropTypes.string
 };
 
 export { Greet };
